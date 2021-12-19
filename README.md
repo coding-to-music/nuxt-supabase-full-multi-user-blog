@@ -1,5 +1,13 @@
 # Building a Multi-User Blogging App with Nuxt and Supabase
 
+By Nader Dabit https://css-tricks.com/author/dabit/
+
+Aug 19, 2021
+
+https://css-tricks.com/using-nuxt-and-supabase-for-a-multi-user-blogging-app/
+
+https://github.com/dabit3/nuxt-supabase-full-multi-user-blog
+
 This project goes along with the blog post featured on CSS Tricks.
 
 ### Running the project
@@ -48,6 +56,17 @@ cd nuxt-supabase-full-multi-user-blog
 
 yarn
 ```
+
+5. Create a file called .env.local that includes the following variables:
+
+```java
+# .env.local
+
+SUPABASE_PROJECT_URL='<SUPABASE_PROJECT_URL>'
+SUPBASE_ANON_API_KEY='<SUPBASE_ANON_API_KEY>'
+```
+
+We need to replace the values with a project ID and API token. Both of these can be retrieved from your Sanity project dashboard.
 
 5. Update __plugins/client.js__ with the values from your Supabase project:
 
