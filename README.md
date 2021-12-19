@@ -57,13 +57,15 @@ cd nuxt-supabase-full-multi-user-blog
 yarn
 ```
 
-5. Create a file called .env.local that includes the following variables:
+5. Create a file called `.env` that includes the following variables:
+
+https://nuxtjs.org/docs/configuration-glossary/configuration-env/
 
 ```java
-# .env.local
+# .env
 
-SUPABASE_PROJECT_URL='<SUPABASE_PROJECT_URL>'
-SUPBASE_ANON_API_KEY='<SUPBASE_ANON_API_KEY>'
+NUXT_ENV_SUPABASE_PROJECT_URL=<SUPABASE_PROJECT_URL>'
+NUXT_ENV_SUPBASE_ANON_API_KEY='<SUPBASE_ANON_API_KEY>'
 ```
 
 We need to replace the values with a project ID and API token. Both of these can be retrieved from your Sanity project dashboard.

@@ -16,11 +16,6 @@ export default {
     ]
   },
 
-  env: {
-    SUPABASE_PROJECT_URL: process.env.SUPABASE_PROJECT_URL,
-    SUPBASE_ANON_API_KEY: process.env.SUPBASE_ANON_API_KEY,
-  },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'simplemde/dist/simplemde.min.css',
