@@ -16,6 +16,11 @@ export default {
     ]
   },
 
+  env: {
+    SUPABASE_PROJECT_URL: process.env.SUPABASE_PROJECT_URL,
+    SUPBASE_ANON_API_KEY: process.env.SUPBASE_ANON_API_KEY,
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'simplemde/dist/simplemde.min.css',
@@ -31,11 +36,13 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/dotenv'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    ['@nuxtjs/dotenv', { systemvars: true }]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
