@@ -8,6 +8,8 @@ https://css-tricks.com/using-nuxt-and-supabase-for-a-multi-user-blogging-app/
 
 https://github.com/dabit3/nuxt-supabase-full-multi-user-blog
 
+https://github.com/coding-to-music/nuxt-supabase-full-multi-user-blog
+
 This project goes along with the blog post featured on CSS Tricks.
 
 ### Running the project
