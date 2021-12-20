@@ -93,7 +93,7 @@ export default (_, inject) => {
 }
 ```
 
-![API Configuration](api-config.jpeg)
+![API Configuration](https://github.com/coding-to-music/nuxt-supabase-full-multi-user-blog/raw/main/api-config.jpeg)
 
 7. Run the server
 
