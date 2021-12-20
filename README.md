@@ -54,7 +54,7 @@ git clone git@github.com:dabit3/nuxt-supabase-full-multi-user-blog.git
 ```sh
 cd nuxt-supabase-full-multi-user-blog
 
-yarn
+npm install
 ```
 
 5. Create a file called `.env` that includes the following variables:
@@ -68,17 +68,23 @@ NUXT_ENV_SUPABASE_PROJECT_URL=<SUPABASE_PROJECT_URL>'
 NUXT_ENV_SUPBASE_ANON_API_KEY='<SUPBASE_ANON_API_KEY>'
 ```
 
-We need to replace the values with a project ID and API token. Both of these can be retrieved from your Sanity project dashboard.
+We need to replace the values with a project ID and API token. Both of these can be retrieved from your Supabase project dashboard.
 
-5. Update __plugins/client.js__ with the values from your Supabase project:
+6. Update __plugins/client.js__ with the values from your Supabase project:
 
 ```javascript
 import { createClient } from '@supabase/supabase-js'
 
+const NUXT_ENV_SUPABASE_PROJECT_URL = process.env.NUXT_ENV_SUPABASE_PROJECT_URL;
+const NUXT_ENV_SUPBASE_ANON_API_KEY = process.env.NUXT_ENV_SUPBASE_ANON_API_KEY;
+
+// console.log(process.env.NUXT_ENV_SUPABASE_PROJECT_URL);
+// console.log(process.env.NUXT_ENV_SUPBASE_ANON_API_KEY);
+
 const supabase = createClient(
-  "your-supabase-api-url", // Supabase API URL
-  "your-supabase-public-api-key" // Supabase API Key
-)
+  NUXT_ENV_SUPABASE_PROJECT_URL,
+  NUXT_ENV_SUPBASE_ANON_API_KEY
+  )
 
 export default (_, inject) => {
   inject('supabase', supabase)
@@ -87,7 +93,7 @@ export default (_, inject) => {
 
 ![API Configuration](api-config.jpeg)
 
-6. Run the server
+7. Run the server
 
 ```sh
 npm run dev
